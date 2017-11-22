@@ -27,4 +27,25 @@
             <url>http://nexus.yazuosoft.com/nexus/content/repositories/snapshots</url>
         </snapshotRepository>
     </distributionManagement>
+    <repositories>
+        <repository>
+            <id>aliyun</id>
+            <url>http://maven.aliyun.com/nexus/content/groups/public</url>
+        </repository>
+        <repository>
+            <id>nexus</id>
+            <url>http://nexus.yazuosoft.com/nexus/content/groups/public-all/</url>
+        </repository>
+        <repository>
+            <id>releases</id>
+            <url>http://nexus.yazuosoft.com/nexus/content/repositories/releases</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+        </repository>
+        <repository>
+            <id>Snapshots</id>
+            <url>http://nexus.yazuosoft.com/nexus/content/repositories/snapshots</url>
+        </repository>
+    </repositories>
 </project>
