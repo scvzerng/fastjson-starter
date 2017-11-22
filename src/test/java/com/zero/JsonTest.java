@@ -7,6 +7,7 @@ import com.alibaba.fastjson.serializer.ContextValueFilter;
 import com.alibaba.fastjson.util.ASMClassLoader;
 import com.yazuo.intelligent.fastjson.annotation.JSONString;
 import com.yazuo.intelligent.fastjson.parser.deserializer.CustomerASMDeserializerFactory;
+import com.yazuo.intelligent.fastjson.serializer.Serializers;
 import com.zero.entity.Data;
 import com.zero.entity.Person;
 
@@ -31,12 +32,7 @@ public class JsonTest {
         Data data = JSON.parseObject(json,Data.class);
         assert data.getName().equals("1");
         System.out.println(JSON.toJSONString(data));
-        System.out.println(JSON.toJSONString(data, new ContextValueFilter() {
-
-            public Object process(BeanContext context, Object object, String name, Object value) {
-                return context.getField().getAnnotation(JSONString.class)!=null?JSON.toJSONString(value):value;
-            }
-        }));
+        System.out.println(JSON.toJSONString(data, Serializers.BEAN_TO_STRING));
     }
 
 }
