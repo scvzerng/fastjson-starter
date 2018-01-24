@@ -1,11 +1,11 @@
-package com.yazuo.intelligent.fastjson.parser.deserializer;
+package com.zero.scvzerng.fastjson.deserializer;
 
 import com.alibaba.fastjson.parser.ParserConfig;
 import com.alibaba.fastjson.parser.deserializer.FieldDeserializer;
 import com.alibaba.fastjson.parser.deserializer.JavaBeanDeserializer;
 import com.alibaba.fastjson.util.FieldInfo;
 import com.alibaba.fastjson.util.JavaBeanInfo;
-import com.yazuo.intelligent.fastjson.annotation.JSONString;
+import com.zero.scvzerng.fastjson.annotation.JSONString;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;

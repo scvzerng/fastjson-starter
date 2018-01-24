@@ -1,4 +1,4 @@
-package com.yazuo.intelligent.fastjson.annotation;
+package com.zero.scvzerng.fastjson.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

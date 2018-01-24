@@ -2,7 +2,8 @@ package com.zero.entity;
 
 
 
-import com.yazuo.intelligent.fastjson.annotation.JSONString;
+
+import com.zero.scvzerng.fastjson.annotation.JSONString;
 
 import java.util.List;
 

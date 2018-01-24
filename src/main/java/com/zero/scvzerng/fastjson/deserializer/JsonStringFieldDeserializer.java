@@ -1,4 +1,4 @@
-package com.yazuo.intelligent.fastjson.parser.deserializer;
+package com.zero.scvzerng.fastjson.deserializer;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;

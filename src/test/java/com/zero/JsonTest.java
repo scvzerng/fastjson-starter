@@ -2,15 +2,14 @@ package com.zero;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.parser.ParserConfig;
-import com.alibaba.fastjson.serializer.BeanContext;
-import com.alibaba.fastjson.serializer.ContextValueFilter;
 import com.alibaba.fastjson.util.ASMClassLoader;
-import com.yazuo.intelligent.fastjson.annotation.JSONString;
-import com.yazuo.intelligent.fastjson.parser.deserializer.CustomerASMDeserializerFactory;
-import com.yazuo.intelligent.fastjson.serializer.Serializers;
 import com.zero.entity.Data;
 import com.zero.entity.Person;
+import com.zero.scvzerng.fastjson.deserializer.CustomerASMDeserializerFactory;
+import com.zero.scvzerng.fastjson.serializer.Serializers;
 
+import java.io.IOException;
+import java.net.Socket;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -20,7 +19,10 @@ public class JsonTest {
     static {
         ParserConfig.global = new ParserConfig(new CustomerASMDeserializerFactory(new ASMClassLoader()));
     }
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+        byte[] buff = new byte[1024];
+        new Socket("192.168.50.100",6379).getInputStream().read(buff);
+        System.out.println(new String(buff));
         List<Person> personList = new ArrayList<Person>();
         personList.add(new Person("lili"));
         Map jsonMap = new HashMap();
